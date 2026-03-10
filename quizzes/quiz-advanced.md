@@ -31,6 +31,7 @@ These questions are scenario-oriented. Answer them as if explaining your reasoni
 15. What is the strongest sign that a learner is ready for VMCE-style scenario questions?
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

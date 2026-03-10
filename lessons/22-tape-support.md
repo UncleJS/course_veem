@@ -154,6 +154,7 @@ Tape works best when procedures are disciplined. Media handling, labeling, chain
 5. Because no single medium addresses all performance, resilience, and retention needs equally well.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

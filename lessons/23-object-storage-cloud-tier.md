@@ -153,6 +153,7 @@ This is especially important in exam-style reasoning. If a question presents a l
 5. Because not every environment’s restore needs or operational model fit it equally well.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

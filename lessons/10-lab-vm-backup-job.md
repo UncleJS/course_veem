@@ -229,6 +229,7 @@ These exercises help connect a basic backup run to broader policy thinking.
 5. Duration, warnings, settings used, repository target, and whether results matched intent.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

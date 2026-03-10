@@ -31,6 +31,7 @@ Answer the questions without looking at the lesson answer sections first. Use co
 15. Why should no-hypervisor systems be included in backup planning from the beginning?
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

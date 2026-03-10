@@ -192,6 +192,7 @@ Recommended progression:
 - `exam/28-vmce-exam-prep.md` as the closing consolidation lesson
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](LICENSE.md)

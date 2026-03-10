@@ -97,6 +97,7 @@
 Start with [`00-index.md`](00-index.md), then continue in numeric order. Use the root [`../README.md`](../README.md) for overall project navigation, the [`../quizzes/`](../quizzes/) folder for checkpoints, and the [`../exam/`](../exam/) folder for final exam-prep materials.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

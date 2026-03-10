@@ -182,6 +182,7 @@ You have completed the lab if you can explain how NAS backup differs from VM bac
 5. Because file shares remain critical workloads even when virtual machine protection is limited.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

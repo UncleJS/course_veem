@@ -172,6 +172,7 @@ In pure no-hypervisor environments, traditional VM replication is not the primar
 5. Because recovery is incomplete if you cannot safely return or redefine production state afterward.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

@@ -210,6 +210,7 @@ You have completed the lab if you can match the recovery method to the incident 
 5. You must consider whether the restore point is clean and whether validation or isolation is needed before returning it to production.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

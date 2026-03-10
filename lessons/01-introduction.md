@@ -305,6 +305,7 @@ At the end of this lesson, you should be able to answer these practical starter 
 5. Because support, features, and operational behavior can change across v12.1, v12.2, and v12.3.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

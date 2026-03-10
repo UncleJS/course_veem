@@ -6,16 +6,18 @@
 
 ## Table of Contents
 
-- [Section 1 — Fundamentals](#section-1-fundamentals)
-- [Section 2 — Architecture](#section-2-architecture)
-- [Section 3 — Installation and Infrastructure](#section-3-installation-and-infrastructure)
-- [Section 4 — Repositories and Storage](#section-4-repositories-and-storage)
-- [Section 5 — Jobs and Processing](#section-5-jobs-and-processing)
-- [Section 6 — Proxy, Source and Platform Behavior](#section-6-proxy-source-and-platform-behavior)
-- [Section 7 — Agents, NAS and Mixed Environments](#section-7-agents-nas-and-mixed-environments)
-- [Section 8 — Restore and Recovery](#section-8-restore-and-recovery)
-- [Section 9 — Replication, Copy, Scale and Operations](#section-9-replication-copy-scale-and-operations)
-- [Section 10 — Troubleshooting and Exam Reasoning](#section-10-troubleshooting-and-exam-reasoning)
+- [Veeam Backup \& Replication v12.x Master Exam Bank](#veeam-backup--replication-v12x-master-exam-bank)
+  - [Table of Contents](#table-of-contents)
+  - [Section 1 — Fundamentals](#section-1--fundamentals)
+  - [Section 2 — Architecture](#section-2--architecture)
+  - [Section 3 — Installation and Infrastructure](#section-3--installation-and-infrastructure)
+  - [Section 4 — Repositories and Storage](#section-4--repositories-and-storage)
+  - [Section 5 — Jobs and Processing](#section-5--jobs-and-processing)
+  - [Section 6 — Proxy, Source and Platform Behavior](#section-6--proxy-source-and-platform-behavior)
+  - [Section 7 — Agents, NAS and Mixed Environments](#section-7--agents-nas-and-mixed-environments)
+  - [Section 8 — Restore and Recovery](#section-8--restore-and-recovery)
+  - [Section 9 — Replication, Copy, Scale and Operations](#section-9--replication-copy-scale-and-operations)
+  - [Section 10 — Troubleshooting and Exam Reasoning](#section-10--troubleshooting-and-exam-reasoning)
 
 This file provides a larger practice bank for review sessions, mock exams, and instructor-led study. Questions are grouped by module for easier reuse.
 
@@ -190,6 +192,7 @@ This file provides a larger practice bank for review sessions, mock exams, and i
 120. Why is layered troubleshooting more effective than memorizing isolated error strings?
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

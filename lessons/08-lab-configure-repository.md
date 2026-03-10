@@ -191,6 +191,7 @@ The lab is complete when:
 5. Health, available space, component deployment success, and clear repository role understanding.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

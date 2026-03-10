@@ -161,6 +161,7 @@ GFS becomes more useful when you translate it out of backup jargon and back into
 5. Because recovery resilience depends on copy separation, not on workload type.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

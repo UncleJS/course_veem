@@ -164,6 +164,7 @@ Different audiences need different summaries. An operator may need per-job detai
 5. Because reliable recovery depends on ongoing visibility into platform health.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

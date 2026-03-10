@@ -274,6 +274,7 @@ You have completed the lab if you can hand your worksheet to another administrat
 5. Because expired or locked credentials are a common cause of backup and management failures.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

@@ -228,6 +228,7 @@ You have completed the lab if you can show, in the Veeam console, at least two s
 5. They become the primary protected workloads and management targets rather than secondary supporting systems.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

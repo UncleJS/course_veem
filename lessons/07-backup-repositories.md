@@ -274,6 +274,7 @@ You have completed the lab if you can justify a repository choice using both ope
 5. Because agent backups still rely on durable, secure, and recoverable storage targets.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

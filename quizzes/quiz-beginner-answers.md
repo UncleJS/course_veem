@@ -24,6 +24,7 @@
 15. Because physical and standalone systems may still be critical and require first-class protection design.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

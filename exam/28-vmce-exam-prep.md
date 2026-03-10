@@ -11,18 +11,25 @@
 
 ## Table of Contents
 
-- [Learning Objectives](#learning-objectives)
-- [Concepts and Theory](#concepts-and-theory)
-- [How to Study From Here](#how-to-study-from-here)
-- [50 Practice Questions](#50-practice-questions)
-- [Short Answer Guidance](#short-answer-guidance)
-- [Practical Self-Assessment Rubric](#practical-self-assessment-rubric)
-- [Scenario Practice Guidance](#scenario-practice-guidance)
-- [Reference Lab Topology Appendix](#reference-lab-topology-appendix)
-- [Final Advice](#final-advice)
-- [Exam Day Advice](#exam-day-advice)
-- [Key Takeaways](#key-takeaways)
-- [Review Questions](#review-questions)
+- [Lesson 28 — VMCE Exam Preparation: Review, Scenario Practice and Reference Lab Appendix](#lesson-28--vmce-exam-preparation-review-scenario-practice-and-reference-lab-appendix)
+  - [Table of Contents](#table-of-contents)
+  - [Learning Objectives](#learning-objectives)
+  - [Concepts and Theory](#concepts-and-theory)
+  - [How to Study From Here](#how-to-study-from-here)
+  - [50 Practice Questions](#50-practice-questions)
+  - [Short Answer Guidance](#short-answer-guidance)
+  - [Practical Self-Assessment Rubric](#practical-self-assessment-rubric)
+  - [Scenario Practice Guidance](#scenario-practice-guidance)
+  - [Reference Lab Topology Appendix](#reference-lab-topology-appendix)
+    - [Example Domain and Networks](#example-domain-and-networks)
+    - [Example Systems](#example-systems)
+    - [Example Role Assignments](#example-role-assignments)
+    - [ASCII Topology](#ascii-topology)
+  - [Final Advice](#final-advice)
+  - [Exam Day Advice](#exam-day-advice)
+  - [Key Takeaways](#key-takeaways)
+  - [Review Questions](#review-questions)
+    - [Answers](#answers)
 
 [Go to TOC](#table-of-contents)
 
@@ -261,6 +268,7 @@ If you can explain why a design choice is correct, perform a backup, perform a r
 5. The ability to explain, implement, recover, and troubleshoot without relying entirely on step-by-step prompts.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

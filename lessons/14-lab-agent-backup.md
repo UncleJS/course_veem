@@ -191,6 +191,7 @@ These exercises help cement the policy-thinking side of the lesson.
 5. Because it reveals whether the policy actually works in the real endpoint context.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

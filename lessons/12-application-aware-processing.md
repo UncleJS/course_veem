@@ -197,6 +197,7 @@ You have completed the lab if you can clearly explain why a transactional worklo
 5. Because transactional consistency still matters regardless of whether the backup is image-based or agent-based.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

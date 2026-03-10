@@ -283,6 +283,7 @@ You have completed the lab if you can explain, in order, how data moves during a
 5. It determines where restore points live, how fast they can be written or restored, and how resistant they are to failure or attack.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

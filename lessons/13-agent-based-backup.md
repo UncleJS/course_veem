@@ -211,6 +211,7 @@ You have completed the lab if you can explain the protection and recovery model 
 5. Kernel or snapshot-module compatibility issues.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

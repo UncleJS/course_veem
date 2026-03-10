@@ -647,6 +647,7 @@ Design a triage plan for the case where several jobs fail shortly after a passwo
 10. Because the same visible error text can originate from different underlying layers, but layer analysis narrows the real cause quickly.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

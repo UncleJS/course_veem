@@ -166,6 +166,7 @@ The value of this lab is not simply that a replica exists. The real value is und
 5. Because a complete DR workflow includes returning or stabilizing the workload after failover.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

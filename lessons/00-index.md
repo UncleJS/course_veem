@@ -247,6 +247,7 @@ These checkpoints help instructors and team leads assess whether learners are me
 Proceed to Lesson 1 to begin.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

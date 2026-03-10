@@ -218,6 +218,7 @@ You can consider the lab complete when all of the following are true:
 5. Firewall, credential, or SQL permissions issues.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

@@ -241,6 +241,7 @@ You have completed the lab if you can justify every major job setting based on t
 5. Because the same policy logic applies even if the mechanics are implemented through agents rather than hypervisor-based image backups.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

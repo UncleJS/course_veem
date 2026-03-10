@@ -24,6 +24,7 @@
 15. The ability to explain, implement, recover, and troubleshoot with clear reasoning rather than memorized feature names.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

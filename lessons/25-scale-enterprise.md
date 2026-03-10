@@ -170,6 +170,7 @@ This model is useful because it shows that scale is not just about adding more i
 5. Reporting, inventory workflows, standardized operations, and controlled integrations.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

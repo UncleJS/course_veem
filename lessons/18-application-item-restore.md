@@ -176,6 +176,7 @@ You have completed the lab if you can explain when application item recovery is 
 5. Because the recovery scope problem exists regardless of the source protection method.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

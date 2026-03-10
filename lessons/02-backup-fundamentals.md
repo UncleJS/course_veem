@@ -288,6 +288,7 @@ You have completed the lab if your policy choices clearly connect business requi
 5. Because critical systems may require faster recovery or additional resilience measures that backup alone does not provide.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

@@ -214,6 +214,7 @@ You have completed the lab if you can explain the role of the proxy in your curr
 5. Whether the source read path and proxy transport behavior are still what you expect.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

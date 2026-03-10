@@ -24,6 +24,7 @@
 15. Because it allows narrow-scope recovery of important objects without full system rollback.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

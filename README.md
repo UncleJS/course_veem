@@ -6,15 +6,20 @@
 
 ## Table of Contents
 
-- [What is included](#what-is-included)
-- [Audience](#audience)
-- [Coverage](#coverage)
-- [Learning style](#learning-style)
-- [Additional learning assets](#additional-learning-assets)
-- [Suggested order](#suggested-order)
-- [Notes](#notes)
-- [Recommended use patterns](#recommended-use-patterns)
-- [Files](#files)
+- [Veeam Backup \& Replication v12.x Course](#veeam-backup--replication-v12x-course)
+  - [Table of Contents](#table-of-contents)
+  - [What is included](#what-is-included)
+  - [Audience](#audience)
+  - [Coverage](#coverage)
+  - [Learning style](#learning-style)
+  - [Additional learning assets](#additional-learning-assets)
+  - [Suggested order](#suggested-order)
+  - [Notes](#notes)
+  - [Recommended use patterns](#recommended-use-patterns)
+    - [Self-study](#self-study)
+    - [Team training](#team-training)
+  - [Files](#files)
+    - [File Navigation Table](#file-navigation-table)
 
 Beginner-to-advanced self-study course for **Veeam Backup & Replication v12**, with update awareness for **v12.1, v12.2, and v12.3**.
 
@@ -144,6 +149,7 @@ Top-level structure:
 You can read the Markdown files directly from their folders or import them into your preferred documentation or course platform later.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](LICENSE.md)

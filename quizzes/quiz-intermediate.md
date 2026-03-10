@@ -31,6 +31,7 @@ Answer from memory first. Then check the corresponding lessons if needed.
 15. Why is application item recovery operationally valuable?
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)

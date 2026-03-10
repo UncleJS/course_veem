@@ -202,6 +202,7 @@ The v12 generation increased the visibility and importance of cyber resilience f
 5. It confirms that recoverable data actually exists and may support clean-point selection after compromise.
 
 [Go to TOC](#table-of-contents)
+
 ---
 
 **License:** [CC BY-NC-SA 4.0](../LICENSE.md)
