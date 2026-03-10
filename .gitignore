@@ -33,3 +33,10 @@ secrets.*
 
 # Local overrides
 *.local
+
+# PDF build pipeline
+pdf/node_modules/
+pdf/output/
+pdf/.mermaid-tmp/
+pdf/bun.lock
+pdf/bun.lockb

@@ -1,0 +1,16 @@
+{
+  "name": "course-veem-pdf",
+  "version": "1.0.0",
+  "description": "PDF build pipeline for Veeam B&R v12.x course",
+  "type": "module",
+  "scripts": {
+    "build": "bun run build.js",
+    "build:combined": "bun run build.js --combined-only",
+    "build:individual": "bun run build.js --individual-only"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.2",
+    "marked": "^15.0.0",
+    "puppeteer": "^24.0.0"
+  }
+}
