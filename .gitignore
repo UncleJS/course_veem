@@ -1,0 +1,35 @@
+note.txt
+
+# Environment files
+.env
+.env.*
+.env.example
+
+# Local config and secrets
+config.local.json
+config.local.yaml
+config.local.yml
+config.local.toml
+config.*.local.json
+config.*.local.yaml
+config.*.local.yml
+config.*.local.toml
+
+# Credentials and auth files
+credentials.json
+credentials*.json
+*credentials*.json
+auth.json
+auth.local.json
+
+# Secret material
+secrets.*
+*.secret
+*.secrets.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local overrides
+*.local
