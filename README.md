@@ -31,6 +31,7 @@ Beginner-to-advanced self-study course for **Veeam Backup & Replication v12**, w
 - `quizzes/` — quiz files and answer keys
 - `exam/` — exam-prep lesson and exam assets
 - `instructor-guide.md` — module-based syllabus and delivery guide
+- `glossary.md` — extensive A–Z glossary of all course terminology
 
 [Go to TOC](#table-of-contents)
 
@@ -134,6 +135,7 @@ Top-level structure:
 | Root | [`README.md`](README.md) | Course homepage and navigation guide |
 | Root | [`LICENSE.md`](LICENSE.md) | Creative Commons BY-NC-SA 4.0 license |
 | Root | [`instructor-guide.md`](instructor-guide.md) | Module-based syllabus and instructor delivery guide |
+| Root | [`glossary.md`](glossary.md) | Extensive A–Z glossary of all course terminology |
 | Lessons | [`lessons/README.md`](lessons/README.md) | Lesson folder index and lesson table of contents |
 | Lessons | [`lessons/00-index.md`](lessons/00-index.md) | Master index and course roadmap |
 | Quizzes | [`quizzes/quiz-beginner.md`](quizzes/quiz-beginner.md) | Beginner quiz |

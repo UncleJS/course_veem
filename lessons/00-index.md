@@ -23,6 +23,7 @@
 - [Study Advice](#study-advice)
 - [Success Criteria for Learners](#success-criteria-for-learners)
 - [Instructor and Team Lead Notes](#instructor-and-team-lead-notes)
+- [Reference Documents](#reference-documents)
 
 [Go to TOC](#table-of-contents)
 
@@ -113,6 +114,7 @@ This sequence mirrors how real-world competence develops. Teams that skip direct
 | `26-monitoring-reporting.md` | Monitoring, Reporting and Capacity Planning | Advanced |
 | `27-troubleshooting.md` | Deep-Dive Troubleshooting | Advanced |
 | `28-vmce-exam-prep.md` | VMCE-Style Review, Practice Questions and Lab Appendix | All |
+| [`../glossary.md`](../glossary.md) | Glossary of Terms — A–Z reference for all course terminology | Reference |
 
 [Go to TOC](#table-of-contents)
 
@@ -245,6 +247,17 @@ If this course is being used for internal enablement, onboarding, or cross-train
 These checkpoints help instructors and team leads assess whether learners are merely following instructions or actually building operational judgment.
 
 Proceed to Lesson 1 to begin.
+
+[Go to TOC](#table-of-contents)
+
+## Reference Documents
+
+The following documents are standalone references that complement the lesson content. They are not lessons themselves and do not need to be read in sequence, but they are useful throughout the course and as revision aids.
+
+| Document | Description |
+|---|---|
+| [`../glossary.md`](../glossary.md) | Extensive A–Z glossary of all terms, acronyms, and concepts used in the course |
+| [`../instructor-guide.md`](../instructor-guide.md) | Module-based syllabus and delivery guidance for instructors and team leads |
 
 [Go to TOC](#table-of-contents)
 

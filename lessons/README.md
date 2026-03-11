@@ -10,6 +10,7 @@
 - [Beginner Lessons](#beginner-lessons)
 - [Intermediate Lessons](#intermediate-lessons)
 - [Advanced Lessons](#advanced-lessons)
+- [Reference Documents](#reference-documents)
 - [How to Use This Folder](#how-to-use-this-folder)
 
 [Go to TOC](#table-of-contents)
@@ -89,6 +90,17 @@
 - [`25-scale-enterprise.md`](25-scale-enterprise.md)
 - [`26-monitoring-reporting.md`](26-monitoring-reporting.md)
 - [`27-troubleshooting.md`](27-troubleshooting.md)
+
+[Go to TOC](#table-of-contents)
+
+## Reference Documents
+
+These documents are standalone references used alongside the lessons. They are not numbered lessons and do not need to be read in order.
+
+| Document | Description |
+|---|---|
+| [`../glossary.md`](../glossary.md) | Extensive A–Z glossary of all terms, acronyms, and concepts used across the course |
+| [`../instructor-guide.md`](../instructor-guide.md) | Module-based syllabus and delivery guidance for instructors and team leads |
 
 [Go to TOC](#table-of-contents)
 

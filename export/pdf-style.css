@@ -1,0 +1,165 @@
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+body {
+  font-family: "Segoe UI", "Liberation Sans", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #1a1a1a;
+  max-width: none;
+}
+
+/* ── Headings ─────────────────────────────────────────────────────────────── */
+h1 {
+  font-size: 20pt;
+  color: #005b99;
+  border-bottom: 2px solid #005b99;
+  padding-bottom: 4px;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  /* Never leave an H1 stranded — always break BEFORE it so it opens a page */
+  break-before: page;
+  break-after: avoid;
+}
+
+h2 {
+  font-size: 14pt;
+  color: #0077cc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1.6em;
+  margin-bottom: 0.4em;
+  /* Keep heading with the content that follows */
+  break-after: avoid;
+  break-before: avoid;
+  /* Do not allow a break between this heading and the next sibling */
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 12pt;
+  color: #333;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 11pt;
+  color: #555;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Ensure at least 3 lines of following content stay with a heading */
+h2 + p, h2 + ul, h2 + ol, h2 + blockquote, h2 + pre, h2 + table,
+h3 + p, h3 + ul, h3 + ol, h3 + blockquote, h3 + pre, h3 + table,
+h4 + p, h4 + ul, h4 + ol {
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+/* ── Paragraphs & lists ───────────────────────────────────────────────────── */
+p {
+  orphans: 3;
+  widows: 3;
+  margin: 0.4em 0 0.6em;
+}
+
+ul, ol {
+  orphans: 3;
+  widows: 3;
+  margin: 0.4em 0 0.6em;
+  padding-left: 1.6em;
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+/* ── Code ─────────────────────────────────────────────────────────────────── */
+code {
+  font-family: "Consolas", "Liberation Mono", monospace;
+  font-size: 9.5pt;
+  background: #f4f4f4;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+pre {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 9pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 10pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+th {
+  background: #005b99;
+  color: white;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+}
+
+tr:nth-child(even) td {
+  background: #f9f9f9;
+}
+
+/* ── Blockquotes ──────────────────────────────────────────────────────────── */
+blockquote {
+  border-left: 4px solid #005b99;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: #eef5fb;
+  color: #333;
+  break-inside: avoid;
+}
+
+/* ── HR ───────────────────────────────────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+a {
+  color: #0055aa;
+}
+
+/* ── Images ───────────────────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+}
+
+/* ── Page setup ───────────────────────────────────────────────────────────── */
+@page {
+  size: A4;
+  margin: 20mm 18mm 20mm 18mm;
+}
+
+/* First H1 on the very first page should NOT force a new page */
+h1:first-of-type {
+  break-before: avoid;
+  page-break-before: avoid;
+}
