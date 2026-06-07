@@ -83,7 +83,7 @@ In a lab, almost anything “works.” In production, it is better to avoid role
 
 ## Database Planning
 
-Veeam uses a configuration database. Small environments often begin with a local or bundled database option, while larger environments may use an externally hosted SQL Server. The decision should be based on environment size, operational standards, DBA support expectations, and recovery planning.
+Veeam uses a configuration database. New v12 installations bundle PostgreSQL as the default engine, while Microsoft SQL Server remains supported — both for upgraded environments that have not migrated and as an externally hosted option in larger environments. The decision should be based on environment size, operational standards, DBA support expectations, and recovery planning.
 
 Important considerations include:
 

@@ -178,6 +178,12 @@ Modern Veeam job design increasingly assumes that backup jobs are only one part 
 
 source backup -> repository restore points -> backup copy or tier -> validation -> restore readiness.
 
+Concrete v12 job settings you should be able to name:
+
+- **Backup chain modes:** forward incremental (the default), forward incremental with periodic **synthetic fulls**, forward incremental with periodic **active fulls**, and **reverse incremental** (still available, but de-emphasized in v12).
+- **Retention can be expressed in restore points or in days** — a v12 job lets you choose either model, and the difference matters when schedules are irregular.
+- **GFS (Grandfather-Father-Son) retention** flags selected weekly, monthly, and yearly full backups for long-term keep, independent of the short-term chain (covered further in Lesson 21).
+
 [Go to TOC](#table-of-contents)
 
 ## Scenario Example

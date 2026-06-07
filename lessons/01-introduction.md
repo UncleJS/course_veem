@@ -13,7 +13,7 @@
 
 - [Learning Objectives](#learning-objectives)
 - [Concepts and Theory](#concepts-and-theory)
-- [What Veeam Backup & Replication Includes](#what-veeam-backup-replication-includes)
+- [What Veeam Backup & Replication Includes](#what-veeam-backup--replication-includes)
 - [Backup, Replication and Copy: Similar Words, Different Jobs](#backup-replication-and-copy-similar-words-different-jobs)
 - [Who Usually Uses Veeam Day to Day](#who-usually-uses-veeam-day-to-day)
 - [Veeam in the Context of Data Resilience](#veeam-in-the-context-of-data-resilience)
@@ -179,7 +179,13 @@ Version 12 was significant because it pushed Veeam further into modern storage p
 - broader workload flexibility and enterprise-scale storage patterns
 - continued evolution in malware-aware and security-focused operational features
 
-Later v12.x updates continued refining support matrices, security features, platform coverage, repository behaviors, and administrator workflows. For course purposes, treat **v12** as the platform generation and **v12.1, v12.2, and v12.3** as important operational refinements. Production administrators should always check the exact build and release notes before planning upgrades or new features.
+Later v12.x updates continued refining support matrices, security features, platform coverage, repository behaviors, and administrator workflows. The headline additions per point release were:
+
+- **v12.1** — inline malware detection (entropy analysis during backup), YARA-based scanning, the Security & Compliance Analyzer, and four-eyes authorization for sensitive operations
+- **v12.2** — broader platform coverage, including a backup plug-in for Proxmox VE
+- **v12.3** — Microsoft Entra ID tenant protection as a workload, Veeam Threat Hunter, and large increases in Instant Recovery scalability
+
+For course purposes, treat **v12** as the platform generation and **v12.1, v12.2, and v12.3** as important operational refinements. Production administrators should always check the exact build and release notes before planning upgrades or new features.
 
 [Go to TOC](#table-of-contents)
 

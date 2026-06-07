@@ -92,6 +92,8 @@ Not every workload requires full application-aware processing in the same way. B
 
 For some workloads, application-aware backups also connect to transaction log handling. Done correctly, this can help keep application log growth under control and support point-in-time recovery models. Done incorrectly, or assumed without validation, it can create confusion or risk.
 
+In v12 terms, this is configured per job on the **Guest Processing** page: for **SQL Server**, Veeam can truncate logs after backup, leave them untouched, or back up transaction logs on an interval (for example every 15 minutes) to enable point-in-time restore; for **Oracle**, the equivalent options manage archived logs. Windows guests are quiesced through **VSS**, while Linux guests use **pre-freeze and post-thaw scripts** instead. The same page also offers **guest file indexing**, which catalogs files inside the guest so individual files can be searched for at restore time.
+
 You should never enable log-handling options casually without understanding the application owner’s recovery expectations.
 
 [Go to TOC](#table-of-contents)

@@ -160,6 +160,12 @@ These topics become even more important in the troubleshooting lesson.
 
 As Veeam environments became more hybrid, agent-based protection grew in importance. Administrators who understand only image-based VM backup are no longer seeing the full platform. Modern Veeam operations require comfort across both hypervisor-integrated and agent-based protection models.
 
+Concrete v12 agent facts worth knowing:
+
+- **Veeam Agent backup modes have names:** Entire computer, Volume-level, and File-level backup. Entire computer is the default and supports bare-metal recovery.
+- **Managed agents can write directly to object storage repositories in v12**, which simplifies protecting remote and branch systems without staging through a conventional repository.
+- Beyond Windows and Linux, Veeam also ships agents for **Mac, AIX, and Solaris**, with narrower feature sets — relevant when inventorying a mixed estate.
+
 [Go to TOC](#table-of-contents)
 
 ## Lab Walkthrough

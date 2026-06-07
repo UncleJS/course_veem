@@ -95,13 +95,15 @@
 
 **CBT (Change Block Tracking)** — A VMware vSphere feature that records which disk blocks have changed since the last backup snapshot. Veeam uses CBT to transfer only modified blocks during incremental backups, greatly reducing backup time and data transferred. If CBT becomes corrupt, it must be reset and a new active full taken. (Lesson 09, 11)
 
+**CDP (Continuous Data Protection)** — A v12 replication capability for VMware that uses vSphere I/O filtering instead of snapshots to continuously ship changed data to a replica, achieving recovery point objectives measured in seconds. CDP requires dedicated CDP proxies and a defined RPO policy, and is intended for the most critical low-RPO workloads; classic snapshot-based replication covers everything else. (Lesson 19)
+
 **Chain** — The sequence of backup files that together describe the full state of a workload at a given restore point. A chain always begins with a full backup (.vbk) and may include one or more incremental files. To restore from a given point, all files in the chain up to that point must be intact. (Lesson 09)
 
 **Cloud Connect** — A Veeam capability that allows end-user Veeam deployments to send backup data to a service provider's repository over the internet without requiring a VPN. The service provider runs a Cloud Gateway and exposes tenant-specific storage. (Lesson 23)
 
 **Configuration Backup** — A scheduled export of the Veeam Backup & Replication configuration database to a backup file (.bcf). It enables full server recovery after a disaster or rebuild. It should be stored offsite or on a separate repository. (Lesson 03, 24)
 
-**Configuration Database** — The SQL Server (or PostgreSQL in later v12.x releases) database that stores all Veeam job definitions, infrastructure records, credentials, schedules, retention settings, and restore point metadata. If this database is lost and there is no configuration backup, all job definitions and metadata are lost even if the backup files on disk are intact. (Lesson 03)
+**Configuration Database** — The database that stores all Veeam job definitions, infrastructure records, credentials, schedules, retention settings, and restore point metadata. New v12 installations use a bundled PostgreSQL instance by default; Microsoft SQL Server remains supported, typically in upgraded or externally hosted deployments. If this database is lost and there is no configuration backup, all job definitions and metadata are lost even if the backup files on disk are intact. (Lesson 03)
 
 **Crash-Consistent Backup** — A backup taken by snapshotting the virtual machine disk at an arbitrary moment without asking the application to flush its state first. The resulting restore point may require crash recovery (log replay) when the workload is powered on. Contrast with application-consistent backup. (Lesson 12)
 
@@ -167,7 +169,7 @@
 
 **GFS (Grandfather-Father-Son)** — A long-term retention scheme that preserves specific backup restore points on a weekly, monthly, and yearly schedule, independently of the regular short-term retention. GFS is commonly required for compliance and regulatory purposes. In Veeam, GFS can be applied to backup copy jobs and tape jobs. (Lesson 21, 22)
 
-**Guest Interaction Proxy (GIP)** — A Veeam component deployed inside the production network that communicates with the guest OS of a protected VM to perform application-aware processing, log truncation, pre- and post-job scripts, and file indexing. The GIP connects to the VM over the network rather than through the VMware tools channel. (Lesson 12)
+**Guest Interaction Proxy (GIP)** — A Veeam component deployed inside the production network that communicates with the guest OS of a protected VM to perform application-aware processing, log truncation, pre- and post-job scripts, and file indexing. The GIP communicates with the guest OS over the network. (Lesson 12)
 
 **Guest OS Processing** — See Application-Aware Processing. Also refers to any in-guest operation performed during backup, such as file indexing, pre-freeze scripts, and log truncation. (Lesson 12)
 
@@ -181,7 +183,7 @@
 
 **Health Check** — A periodic verification run against stored backup files to detect data corruption at the block level. Veeam performs health checks using CRC and hash validation. If corruption is detected, Veeam can automatically trigger a new backup to repair the chain. (Lesson 09)
 
-**Hot Add** — A transport mode for VMware environments where a backup proxy VM is running on the same ESXi host or storage fabric as the protected VM. The proxy mounts the VM's VMDK directly via the storage layer, allowing high-speed reads without LAN overhead. Also called Virtual Appliance mode. (Lesson 11)
+**Hot Add** — A transport mode for VMware environments where a backup proxy VM runs on a host with access to the same datastores as the protected VM. The proxy mounts the VM's VMDK directly via the ESXi storage layer, allowing high-speed reads without LAN overhead. Also called Virtual Appliance mode. (Lesson 11)
 
 **Hyper-V** — Microsoft's hypervisor platform, available as a Windows Server role or as the free Hyper-V Server edition. Veeam protects Hyper-V VMs using Microsoft's Resilient Change Tracking (RCT) API rather than VMware's VADP/CBT. (Lesson 01, 06)
 
@@ -225,7 +227,7 @@
 
 ## L
 
-**LAN Mode (Network Mode)** — A transport mode in which the backup proxy reads VM data from the ESXi host via the VMware NBD (Network Block Device) protocol over the standard TCP/IP network. This is the fallback transport mode and requires no special storage connectivity, but it consumes production network bandwidth. (Lesson 11)
+**LAN Mode (Network Mode)** — A transport mode in which the backup proxy reads VM data from the ESXi host via the VMware NBD (Network Block Device) protocol over the standard TCP/IP network. Often used as the fallback when SAN or Hot Add connectivity is unavailable, it is also a valid primary choice in simpler designs; it requires no special storage connectivity, but consumes production network bandwidth. (Lesson 11)
 
 **License** — The entitlement that governs how many instances (sockets, VMs, or agents) Veeam will protect. VBR licenses are issued per managed instance. Community edition provides limited free protection for a small number of workloads. License types include perpetual, rental, and cloud subscription models. (Lesson 01)
 
@@ -417,7 +419,7 @@
 
 **Veeam Explorer for Oracle** — A Veeam tool that mounts and presents Oracle database backups, enabling tablespace and object-level recovery. (Lesson 18)
 
-**Veeam Explorer for PostgreSQL** — A Veeam tool for item-level recovery from PostgreSQL database backups. Introduced in later v12.x releases. (Lesson 18)
+**Veeam Explorer for PostgreSQL** — A Veeam tool for item-level recovery from PostgreSQL database backups. Introduced in v12. (Lesson 18)
 
 **Veeam Explorer for SharePoint** — A Veeam tool that opens SharePoint farm backups and allows recovery of individual sites, libraries, lists, documents, and items. (Lesson 18)
 
@@ -441,6 +443,8 @@
 
 **Volume Shadow Copy Service (VSS)** — A Windows framework that coordinates the creation of consistent snapshots of volumes across applications and the file system. Veeam uses VSS to request application quiescence during backup of Windows workloads. VSS providers, requestors, and writers all participate in the VSS process, and failures at any point can interrupt application-aware backups. (Lesson 12)
 
+**vPower NFS** — The Veeam technology that publishes a backup file to a VMware host as an NFS datastore, allowing a VM to run directly from its backup. vPower NFS is the engine behind Instant VM Recovery and SureBackup verification on VMware; the recovered VM is later moved to production storage with Migrate to Production (Storage vMotion or Quick Migration). (Lesson 16, 17)
+
 **vSphere** — The VMware product suite for server virtualization, encompassing ESXi (the hypervisor), vCenter Server (the management platform), and associated storage, networking, and management components. (Lesson 01)
 
 [Go to TOC](#table-of-contents)
@@ -451,7 +455,7 @@
 
 **WAN Accelerator** — A Veeam component that reduces the bandwidth consumed by backup copy jobs sent over slow WAN links by applying global data deduplication and compression across the data stream. Requires a WAN accelerator at both the source and target sites. Relevant for backup copy to remote or branch sites. (Lesson 21)
 
-**Windows Hardened Repository** — A Windows-based backup repository with restricted permissions. Less common than a hardened Linux repository, but achievable by removing Veeam's ability to delete files after backup. (Lesson 07)
+**Windows Hardened Repository** — An informal practice, not a Veeam product feature: a Windows-based repository locked down by restricting permissions so that backup files are harder to delete. The supported hardened repository with enforced immutability in v12.x is Linux-only (see Hardened Linux Repository). (Lesson 07)
 
 **WORM (Write Once Read Many)** — A data storage property that prevents written data from being altered or deleted. Implemented via hardware (tape), file system attributes (Linux chattr +i), or object storage policies (S3 Object Lock). WORM is a key mechanism for achieving backup immutability. (Lesson 24)
 

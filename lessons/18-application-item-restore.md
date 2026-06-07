@@ -85,7 +85,7 @@ Database-oriented recovery is one of the most common reasons application-aware b
 
 ### Other Supported Application Contexts
 
-Depending on the workload and integration path, other application-level recovery options may also exist. The exact toolset and platform support can evolve across releases, so always validate the current product capabilities for your environment.
+The full v12 Explorer set covers **Active Directory, Exchange, SQL Server, SharePoint, Oracle, Microsoft Teams, and PostgreSQL** — the PostgreSQL Explorer being new in v12. Each works on the same principle: mount the application's data files from the restore point and extract items without a full server restore (for example, Exchange mounts the database file, SQL Server attaches the database with optional log replay for point-in-time recovery, and Active Directory reads the directory database directly). The exact toolset and platform support can evolve across releases, so always validate the current product capabilities for your environment.
 
 [Go to TOC](#table-of-contents)
 

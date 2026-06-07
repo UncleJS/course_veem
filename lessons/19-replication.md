@@ -21,6 +21,7 @@
 - [Design Considerations](#design-considerations)
 - [Replication Planning Table](#replication-planning-table)
 - [VMware and Hyper-V Context](#vmware-and-hyper-v-context)
+- [v12 Replication Mechanics Worth Naming](#v12-replication-mechanics-worth-naming)
 - [No-Hypervisor Contrast](#no-hypervisor-contrast)
 - [Key Takeaways](#key-takeaways)
 - [Review Questions](#review-questions)
@@ -136,6 +137,19 @@ Replication is strongest when it is selective and intentional. Replicating every
 ## VMware and Hyper-V Context
 
 Replication principles remain consistent across hypervisors, but the details of networking, cluster integration, and storage mapping will vary. Always document platform-specific assumptions.
+
+[Go to TOC](#table-of-contents)
+
+## v12 Replication Mechanics Worth Naming
+
+The concepts above map onto specific v12 features you should recognize:
+
+- **Classic replication is snapshot-based**: each cycle creates a restore point on the replica, with retention measured in replica restore points and RPO bounded by the job schedule (minutes at best).
+- **CDP (Continuous Data Protection)** is the separate v12 capability for VMware that uses vSphere I/O filtering instead of snapshots, achieving RPOs measured in **seconds** for the most critical workloads. It needs CDP proxies and a defined RPO policy.
+- **Replica seeding and mapping** avoid sending the initial full copy over a slow WAN: seed from a backup copied to the DR site, or map to a VM that already exists there.
+- **Re-IP rules** let the replica come up with DR-appropriate network settings during failover instead of the production addresses.
+- The failover lifecycle has named stages: **Failover** (run from replica), **Planned Failover** (zero-data-loss switch using a final sync), **Permanent Failover** (the replica becomes production), and **Failback** with a final **commit or undo** decision once the original site is restored.
+- **WAN accelerators** can sit between source and target to deduplicate and compress replication (and backup copy) traffic over constrained links.
 
 [Go to TOC](#table-of-contents)
 

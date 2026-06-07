@@ -217,7 +217,15 @@ In these environments, the lack of a hypervisor does not reduce the importance o
 
 ## v12.x Notes
 
-The v12 generation strengthened the practical importance of object storage, direct-to-object and cloud-connected strategies, and immutable design patterns. Even if your current environment is simple, learn repository design with growth in mind. A repository decision made today often shapes the next two or three years of backup operations.
+The v12 generation strengthened the practical importance of object storage, direct-to-object and cloud-connected strategies, and immutable design patterns. Specific v12 facts worth committing to memory:
+
+- **Object storage became a standalone primary backup target in v12.** Backup and backup copy jobs can write directly to S3-compatible, Azure Blob, or Google Cloud object storage — it is no longer limited to the SOBR capacity tier role it had in v11.
+- **A Scale-Out Backup Repository has three tiers by name:** the **Performance Tier** (the direct extents), the **Capacity Tier** (object storage for offload via copy or move policy), and the **Archive Tier** (cold object storage such as archive-class cloud tiers for long-term GFS points).
+- **Per-machine backup chains are the v12 default** for new repositories: each protected machine gets its own chain, improving parallelism and granular management.
+- **Fast Clone** (block cloning on Windows ReFS or Linux XFS) lets synthetic full and merge operations reference existing blocks instead of copying them, making synthetic operations dramatically faster and more space-efficient.
+- **The hardened repository is a Linux server** with immutability set in days, single-use credentials (Veeam does not retain reusable root access after deployment), and XFS recommended so Fast Clone is available.
+
+Even if your current environment is simple, learn repository design with growth in mind. A repository decision made today often shapes the next two or three years of backup operations.
 
 [Go to TOC](#table-of-contents)
 

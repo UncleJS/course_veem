@@ -47,6 +47,7 @@
 | 25 | [`25-scale-enterprise.md`](25-scale-enterprise.md) | Enterprise scale, RBAC, and automation |
 | 26 | [`26-monitoring-reporting.md`](26-monitoring-reporting.md) | Monitoring and reporting |
 | 27 | [`27-troubleshooting.md`](27-troubleshooting.md) | Deep-dive troubleshooting |
+| 28 | [`../exam/28-vmce-exam-prep.md`](../exam/28-vmce-exam-prep.md) | VMCE exam prep (lives in `exam/`) |
 
 [Go to TOC](#table-of-contents)
 

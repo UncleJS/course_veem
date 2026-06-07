@@ -91,7 +91,7 @@ In mature environments, repository design becomes one of the most important arch
 
 ## The Configuration Database
 
-Veeam uses a configuration database to store metadata about jobs, infrastructure, sessions, settings, and operational state. In smaller deployments, this may be hosted in a bundled or local SQL-based option; in larger or more performance-sensitive environments, administrators often choose an external SQL platform.
+Veeam uses a configuration database to store metadata about jobs, infrastructure, sessions, settings, and operational state. New v12 installations deploy a bundled PostgreSQL instance by default; Microsoft SQL Server remains supported, and environments upgraded from earlier versions typically continue on SQL Server until migrated. In larger or more performance-sensitive environments, administrators may choose an externally hosted database platform of either type.
 
 Losing the configuration database does not automatically destroy backup files, but it complicates management and recovery of the Veeam environment itself. You should always treat the configuration database as a critical dependency.
 

@@ -38,6 +38,8 @@
 
 A Veeam environment cannot be considered healthy just because jobs usually finish. Reliable operations require visibility into exceptions, trends, capacity, and warning signals that may not yet be causing outright failure.
 
+In product terms, two layers exist. **VBR itself** provides per-job session statistics, email notifications, SNMP traps, and built-in reports. **Veeam ONE** is the dedicated monitoring and reporting product alongside VBR: its **Monitor** component provides real-time dashboards and alarms, **Reporter** provides scheduled reporting and capacity planning, and **Business View** groups infrastructure into business-oriented categories. Larger environments typically rely on Veeam ONE for trend analysis and alarm-driven operations rather than reading job sessions manually.
+
 [Go to TOC](#table-of-contents)
 
 ## What to Monitor

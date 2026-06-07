@@ -32,7 +32,7 @@
 ## Learning Objectives
 
 - explain what a backup proxy does in Veeam
-- compare common VMware transport modes such as NBD, HotAdd, and Direct SAN
+- compare common VMware transport modes such as NBD, HotAdd, Direct SAN, and Direct NFS
 - understand how proxy placement affects performance and scalability
 - recognize common proxy-related pitfalls before they appear in production
 
@@ -64,7 +64,7 @@ This makes the proxy a bridge between source and target. Because of that positio
 
 ## VMware Transport Modes
 
-In VMware environments, you will commonly encounter three transport models:
+In VMware environments, you will commonly encounter four transport models:
 
 ### NBD
 
@@ -79,6 +79,15 @@ HotAdd allows a virtual proxy VM to attach target VM disks and read them more di
 ### Direct SAN
 
 Direct SAN mode allows a proxy with direct storage visibility to read data from shared storage without traversing the production network path in the same way as NBD. This can be highly efficient in the right environment, but it depends on proper storage presentation and careful design.
+
+### Direct NFS
+
+Direct NFS is the equivalent direct-access mode for NFS datastores: the proxy reads VM data straight from the NFS storage rather than through the host management path. Veeam documents it as a distinct transport mode alongside Direct SAN, and it matters in environments where datastores are NFS-backed.
+
+Two further v12 proxy facts worth knowing:
+
+- **VMware backup proxies can run on Linux as well as Windows** in v12, which matters for license cost, attack surface, and hardened design preferences.
+- **Backup from Storage Snapshots** is a separate storage-integration capability: on supported arrays, Veeam reads VM data from a storage-level snapshot instead of holding a VMware snapshot open, shrinking snapshot stun and load on production.
 
 [Go to TOC](#table-of-contents)
 

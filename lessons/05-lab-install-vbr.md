@@ -46,7 +46,7 @@ In production, you should always align the exact installation flow with the curr
 
 ```mermaid
 flowchart LR
-    A[VEEAM-SRV] --> B[Local Database or SQL01]
+    A[VEEAM-SRV] --> B[Local PostgreSQL or SQL01]
     A --> C[Future Sources]
     A --> D[Future Repository]
 ```
@@ -54,7 +54,7 @@ flowchart LR
 Minimum recommended systems:
 
 - `VEEAM-SRV` — Windows Server for the Veeam Backup & Replication role
-- optional `SQL01` — external SQL Server if you want to test separated database placement
+- optional `SQL01` — external Microsoft SQL Server if you want to test separated database placement instead of the bundled PostgreSQL default
 - network connectivity to at least one future source system and one future repository target
 
 [Go to TOC](#table-of-contents)
@@ -69,7 +69,7 @@ Before installation, confirm the following:
 - the account used to install Veeam has local administrative rights on `VEEAM-SRV`
 - required Windows updates and restarts are complete
 - antivirus or endpoint controls are reviewed so they do not block installation paths or services
-- database decision is made: local/bundled or external
+- database decision is made: bundled PostgreSQL (the v12 default) or external SQL Server
 
 [Go to TOC](#table-of-contents)
 
@@ -87,7 +87,7 @@ Obtain the Veeam Backup & Replication v12.x installation media appropriate for y
 
 ### Step 3 — Decide on Database Placement
 
-If you are using a small self-contained lab, a local or bundled database path may be sufficient. If you want to simulate a more structured environment, point Veeam to an external SQL Server such as `SQL01`. Record your choice. The course works with either model, but later troubleshooting and upgrade lessons will be easier if you remember what you chose and why.
+If you are using a small self-contained lab, the bundled PostgreSQL instance that new v12 installations deploy by default is sufficient — expect the installer to propose it. If you want to simulate a more structured environment, point Veeam to an external Microsoft SQL Server such as `SQL01` instead. Record your choice. The course works with either model, but later troubleshooting and upgrade lessons will be easier if you remember what you chose and why.
 
 ### Step 4 — Launch the Installer
 

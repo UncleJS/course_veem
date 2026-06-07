@@ -275,8 +275,11 @@ function rewriteLinksForCombined(html, docSlug) {
 
 /**
  * GitHub-compatible heading slug: lowercase, strip non-word chars, spaces→dashes.
- * Matches what the course authors used when writing their TOC anchor links.
- *   "What Veeam Backup & Replication Includes" → "what-veeam-backup-replication-includes"
+ * Matches GitHub's slugger exactly: each space becomes a hyphen, so headings
+ * containing " — " or " & " produce double hyphens (the punctuation is removed
+ * but both surrounding spaces remain).
+ *   "What Veeam Backup & Replication Includes" → "what-veeam-backup--replication-includes"
+ *   "Part 1 — Troubleshooting Methodology" → "part-1--troubleshooting-methodology"
  *   "Practical Differences Between Learning v12 and Operating v12.x" → "practical-differences-between-learning-v12-and-operating-v12x"
  */
 function headingSlug(text) {
@@ -284,10 +287,9 @@ function headingSlug(text) {
   const plain = text.replace(/<[^>]+>/g, "");
   return plain
     .toLowerCase()
-    .replace(/[^\w\s-]/g, "")   // remove punctuation (keeps letters, digits, _, -, spaces)
     .trim()
-    .replace(/\s+/g, "-")       // spaces → hyphens
-    .replace(/-{2,}/g, "-");    // collapse double-hyphens
+    .replace(/[^\w\s-]/g, "")   // remove punctuation (keeps letters, digits, _, -, spaces)
+    .replace(/\s/g, "-");       // each whitespace char → one hyphen (GitHub keeps double hyphens)
 }
 
 /**

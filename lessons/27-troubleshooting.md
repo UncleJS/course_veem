@@ -13,25 +13,25 @@
 
 - [Learning Objectives](#learning-objectives)
 - [Concepts and Theory](#concepts-and-theory)
-- [Part 1 — Troubleshooting Methodology](#part-1-troubleshooting-methodology)
+- [Part 1 — Troubleshooting Methodology](#part-1--troubleshooting-methodology)
 - [Layer Classification Table](#layer-classification-table)
 - [How to Read a Veeam Failure Log Conceptually](#how-to-read-a-veeam-failure-log-conceptually)
-- [Part 2 — Installation and Upgrade Issues](#part-2-installation-and-upgrade-issues)
-- [Part 3 — Infrastructure and Connectivity Issues](#part-3-infrastructure-and-connectivity-issues)
-- [Part 4 — Proxy and Transport Mode Issues](#part-4-proxy-and-transport-mode-issues)
-- [Part 5 — VMware-Specific Backup Issues](#part-5-vmware-specific-backup-issues)
-- [Part 6 — Hyper-V-Specific Issues](#part-6-hyper-v-specific-issues)
-- [Part 7 — Agent-Based Backup Issues](#part-7-agent-based-backup-issues)
-- [Part 8 — Repository and Storage Issues](#part-8-repository-and-storage-issues)
-- [Part 9 — Application-Aware Processing and VSS Issues](#part-9-application-aware-processing-and-vss-issues)
-- [Part 10 — Restore Issues](#part-10-restore-issues)
-- [Part 11 — Backup Copy and Tape Issues](#part-11-backup-copy-and-tape-issues)
-- [Part 12 — Performance Troubleshooting](#part-12-performance-troubleshooting)
-- [Part 13 — Security and Access Problems](#part-13-security-and-access-problems)
+- [Part 2 — Installation and Upgrade Issues](#part-2--installation-and-upgrade-issues)
+- [Part 3 — Infrastructure and Connectivity Issues](#part-3--infrastructure-and-connectivity-issues)
+- [Part 4 — Proxy and Transport Mode Issues](#part-4--proxy-and-transport-mode-issues)
+- [Part 5 — VMware-Specific Backup Issues](#part-5--vmware-specific-backup-issues)
+- [Part 6 — Hyper-V-Specific Issues](#part-6--hyper-v-specific-issues)
+- [Part 7 — Agent-Based Backup Issues](#part-7--agent-based-backup-issues)
+- [Part 8 — Repository and Storage Issues](#part-8--repository-and-storage-issues)
+- [Part 9 — Application-Aware Processing and VSS Issues](#part-9--application-aware-processing-and-vss-issues)
+- [Part 10 — Restore Issues](#part-10--restore-issues)
+- [Part 11 — Backup Copy and Tape Issues](#part-11--backup-copy-and-tape-issues)
+- [Part 12 — Performance Troubleshooting](#part-12--performance-troubleshooting)
+- [Part 13 — Security and Access Problems](#part-13--security-and-access-problems)
 - [Focused Scenario Catalog](#focused-scenario-catalog)
 - [Common Mistakes During Troubleshooting](#common-mistakes-during-troubleshooting)
-- [Scenario Walkthrough 1 — The Green Job With Hidden Risk](#scenario-walkthrough-1-the-green-job-with-hidden-risk)
-- [Scenario Walkthrough 2 — Everything Failed After a Small Change](#scenario-walkthrough-2-everything-failed-after-a-small-change)
+- [Scenario Walkthrough 1 — The Green Job With Hidden Risk](#scenario-walkthrough-1--the-green-job-with-hidden-risk)
+- [Scenario Walkthrough 2 — Everything Failed After a Small Change](#scenario-walkthrough-2--everything-failed-after-a-small-change)
 - [Building a Personal Troubleshooting Checklist](#building-a-personal-troubleshooting-checklist)
 - [Focused Lab Exercises](#focused-lab-exercises)
 - [Troubleshooting Habits Worth Keeping](#troubleshooting-habits-worth-keeping)
@@ -114,6 +114,8 @@ When reviewing a failed job, ask:
 - is the failure isolated to one workload or repeated across many jobs?
 
 Even if you do not yet know the exact fix, these questions narrow the field dramatically.
+
+Where the evidence lives: on the backup server, component logs are under **`%ProgramData%\Veeam\Backup`** (per-job subfolders), with agent and proxy logs on their respective systems. When escalating to Veeam support, use the console's built-in **Export Logs** wizard (the support bundle), which collects the relevant logs for a selected job, object, or time range rather than requiring manual gathering.
 
 [Go to TOC](#table-of-contents)
 
@@ -464,6 +466,8 @@ Use a bottleneck mindset:
 2. proxy processing
 3. network transfer
 4. repository write
+
+Veeam does this analysis for you: every job session reports **Source / Proxy / Network / Target busy percentages** in its statistics window, and the stage with the highest percentage is the declared bottleneck. A "Target 95%" reading means the repository write path dominated the run — adding proxy resources would change nothing. Read these numbers before changing anything.
 
 The goal is to identify which part is slowest, not to optimize blindly.
 

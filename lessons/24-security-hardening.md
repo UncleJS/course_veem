@@ -173,6 +173,16 @@ As an extension to this lesson, write a short hardening plan for your own lab. I
 
 The v12 generation increased the visibility and importance of cyber resilience features, immutable design, and malware-aware operational thinking. Administrators should treat these not as marketing extras, but as practical resilience tools.
 
+The concrete v12.x security feature set is worth knowing by name:
+
+- **Hardened repository** (v12): Linux-based, immutability set in days, deployed with single-use credentials so no reusable root access remains afterwards.
+- **MFA for the backup console** (v12): protects the most powerful tool in the environment.
+- **Inline malware detection** (v12.1): entropy analysis during backup flags possible encryption events; suspicious restore points are marked.
+- **YARA and antivirus scanning** (v12.1): scan restore points on demand or as part of Secure Restore.
+- **Four-eyes authorization** (v12.1): destructive operations (such as deleting backups) require approval from a second backup administrator.
+- **Security & Compliance Analyzer** (v12.1, evolved from Best Practices Analyzer): continuously checks the backup server configuration against hardening recommendations.
+- **Veeam Threat Hunter** (v12.3): signature- and ML-assisted malware scanning integrated into the platform.
+
 [Go to TOC](#table-of-contents)
 
 ## Key Takeaways

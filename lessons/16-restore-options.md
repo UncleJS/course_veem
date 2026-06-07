@@ -19,6 +19,7 @@
 - [Guest File Restore](#guest-file-restore)
 - [Application Item Restore](#application-item-restore)
 - [Volume or Bare Metal Recovery](#volume-or-bare-metal-recovery)
+- [Other Named v12 Restore Methods](#other-named-v12-restore-methods)
 - [Restore Speed vs. Restore Simplicity](#restore-speed-vs-restore-simplicity)
 - [Recovery Decision Table](#recovery-decision-table)
 - [Recovery Verification](#recovery-verification)
@@ -79,6 +80,8 @@ This method is useful when the whole VM must be reconstructed, the original is l
 
 Instant VM Recovery is designed to restore service quickly by mounting and running the VM directly from backup storage while a more permanent move back to production is prepared. This is a classic example of balancing RTO and long-term restoration completeness.
 
+Mechanically, in VMware environments the backup is published to the host as a **vPower NFS datastore** — the VM runs from the mounted backup, not from production storage. Hyper-V achieves the same outcome through its own mount mechanism. Finalizing means using the **Migrate to Production** action (Storage vMotion or Quick Migration on VMware) or, if the recovery was only a test, simply stopping the Instant Recovery session.
+
 The reason Instant VM Recovery is so powerful is not that it is always the final answer. It is powerful because it gets the service back faster while buying time for a cleaner final placement.
 
 [Go to TOC](#table-of-contents)
@@ -100,6 +103,17 @@ Sometimes what is needed is not the VM, and not just a raw file, but an applicat
 For physical or no-hypervisor systems, recovery needs often involve entire volume sets, operating system recovery, or bare metal rebuild scenarios. This can be more operationally demanding than virtual recovery because hardware compatibility, boot media, and drivers become part of the story.
 
 The broader lesson is that no-hypervisor recovery is often less forgiving than VM recovery. Planning matters more, not less.
+
+[Go to TOC](#table-of-contents)
+
+## Other Named v12 Restore Methods
+
+Beyond the core paths above, v12 offers several distinct restore methods you should recognize by name:
+
+- **Virtual disk restore** — restore a single VMDK/VHDX rather than the whole VM.
+- **Secure Restore** — the restored image is scanned with antivirus or YARA rules *before* it is brought online, preventing reintroduction of malware during recovery.
+- **Staged Restore** — the VM is started in an isolated environment and a script runs against it (for example, redacting data or removing accounts) before it is moved to production.
+- **Restore to cloud** — restore points can be converted and recovered directly into Azure, AWS, or Google Cloud instances, which doubles as a migration path.
 
 [Go to TOC](#table-of-contents)
 

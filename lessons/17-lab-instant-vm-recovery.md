@@ -104,6 +104,8 @@ This distinction is one of the most important recovery habits in the whole cours
 
 If your lab does not complete a full migration back to production, write the next step you would take. The lesson is to understand that Instant VM Recovery is often the first phase, not the last one.
 
+In the v12 console, the named action is **Migrate to Production**: on VMware this moves the running VM off the vPower NFS mount onto production storage via Storage vMotion (or Veeam Quick Migration where Storage vMotion is unavailable). If the recovery was only a verification exercise, the alternative is simply stopping the Instant Recovery session, which discards the temporarily running instance.
+
 In real operations, this may involve moving the workload back to production storage, updating mappings, or planning a controlled maintenance step once the crisis has passed. The key point is that temporary service return and final recovery are related but not identical goals.
 
 ### Step 6 — Capture Validation Evidence

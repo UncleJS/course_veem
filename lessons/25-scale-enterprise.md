@@ -63,7 +63,7 @@ These needs are difficult to satisfy with purely manual, single-console habits.
 
 ## RBAC Thinking
 
-Role-based access control matters because not every operator should be able to do everything. Delegation improves security and operational clarity.
+Role-based access control matters because not every operator should be able to do everything. Delegation improves security and operational clarity. In VBR itself the built-in roles include **Backup Administrator, Backup Operator, Restore Operator, Backup Viewer, and Tape Operator**; **Enterprise Manager** — the optional web-based component that federates multiple backup servers — adds finer-grained delegation, such as letting helpdesk staff perform scoped file or item restores without console access.
 
 In small environments, RBAC can feel like extra complexity. In larger environments, it becomes one of the only practical ways to avoid confusion and over-privilege. Once several teams are involved, the question is no longer whether access should be limited. The question is whether the limits are clear enough that everyone understands their scope without blocking essential operations.
 
@@ -77,6 +77,8 @@ APIs and automation help with:
 - inventory and governance integration
 - controlled operational workflows
 - reducing manual error for repetitive tasks
+
+In v12 the primary interfaces are the **REST API served directly by the backup server (default port 9419)** — new in the v12 generation, where REST previously required Enterprise Manager — and the long-standing **PowerShell module**. The move to **PostgreSQL as the default configuration database** also matters at scale, since it removes the size pressures of the bundled SQL Server Express that earlier generations had.
 
 Automation should not replace understanding. It should scale good practices.
 

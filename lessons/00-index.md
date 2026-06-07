@@ -113,7 +113,7 @@ This sequence mirrors how real-world competence develops. Teams that skip direct
 | `25-scale-enterprise.md` | Enterprise Manager, RBAC, API and Automation | Advanced |
 | `26-monitoring-reporting.md` | Monitoring, Reporting and Capacity Planning | Advanced |
 | `27-troubleshooting.md` | Deep-Dive Troubleshooting | Advanced |
-| `28-vmce-exam-prep.md` | VMCE-Style Review, Practice Questions and Lab Appendix | All |
+| [`../exam/28-vmce-exam-prep.md`](../exam/28-vmce-exam-prep.md) | VMCE-Style Review, Practice Questions and Lab Appendix | All |
 | [`../glossary.md`](../glossary.md) | Glossary of Terms — A–Z reference for all course terminology | Reference |
 
 [Go to TOC](#table-of-contents)

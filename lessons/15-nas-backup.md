@@ -78,7 +78,7 @@ In many environments, the volume of NAS data is large and the file count is even
 
 ## Cache Repository and Processing Considerations
 
-Because NAS backup involves change tracking and file indexing logic, cache behavior becomes relevant. The cache repository supports the operational model that helps Veeam determine what changed between runs. Poor cache design or insufficient space can affect efficiency.
+Because NAS backup involves change tracking and file indexing logic, cache behavior becomes relevant. Architecturally, v12 file-share backup rests on two named components: the **file proxy** (called the backup proxy for file shares in some releases), which reads data from the share and moves it to the target, and the **cache repository**, which stores metadata and checksums about share state so change detection between runs does not require rescanning every file. The cache holds tracking metadata, not file data. Poor cache design or insufficient space can affect efficiency.
 
 The key lesson is that NAS protection is not only about where the backup lands, but also how Veeam keeps track of the file-share state over time.
 
@@ -86,7 +86,7 @@ The key lesson is that NAS protection is not only about where the backup lands, 
 
 ## Recovery Expectations for NAS Data
 
-Most NAS recoveries are granular. Users often need a deleted file, overwritten folder, or prior version restored. That means administrators should pay special attention to:
+Most NAS recoveries are granular. Users often need a deleted file, overwritten folder, or prior version restored. v12 offers three named restore options for file shares: **restore the entire file share**, **restore individual files and folders**, and **rollback to a point in time** (reverting changed files on the live share to an earlier state). That means administrators should pay special attention to:
 
 - browse and search usability
 - retention depth for accidental deletion scenarios
@@ -131,6 +131,8 @@ NAS backup is highly relevant in no-hypervisor and mixed environments. Even if y
 ## v12.x Notes
 
 Modern Veeam environments increasingly treat NAS as a first-class workload type. Administrators should be comfortable discussing file-share protection alongside VM and agent protection rather than seeing it as a niche edge case.
+
+Two v12.x specifics: file-share jobs separate **short-term retention** on the primary target from optional **long-term (archive) retention** on a secondary repository, and **v12.1 extended unstructured-data protection to object storage as a source** — buckets and containers can be backed up much like file shares.
 
 [Go to TOC](#table-of-contents)
 

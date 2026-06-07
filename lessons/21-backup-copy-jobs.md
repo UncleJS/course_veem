@@ -114,6 +114,8 @@ Copy jobs matter just as much for agent-protected systems and NAS data as for VM
 
 One useful way to understand backup copy design is to separate the concept of *how fast the second copy should appear* from *how long that second copy should be retained*. Some environments want the secondary copy updated as soon as practical after the primary backup finishes. Others are comfortable with a more periodic rhythm because bandwidth, target cost, or organizational constraints make constant copy movement less attractive.
 
+These two rhythms are the actual v12 job modes: **immediate copy** mirrors each new restore point (and, optionally, transaction log backups) as soon as the source job produces it, while **periodic copy** synchronizes on its own schedule. Two further v12 specifics: backup copy jobs can target **object storage directly**, and **WAN accelerators** at both ends can deduplicate and compress copy traffic across slow links.
+
 This distinction matters because copy strategy is not purely about “more copies.” It is about the timing, quality, and survivability of those copies. If the source repository is compromised before the secondary copy is current enough, the theoretical protection may not be as strong as the team assumed.
 
 [Go to TOC](#table-of-contents)
