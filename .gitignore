@@ -40,3 +40,6 @@ pdf/output/
 pdf/.mermaid-tmp/
 pdf/bun.lock
 pdf/bun.lockb
+
+# Claude Code local session data
+.claude/
