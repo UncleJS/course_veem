@@ -38,6 +38,7 @@ This guide helps an instructor, team lead, or internal trainer deliver the Veeam
 ### Module 1 — Foundations
 
 Lessons: 00 to 04  
+Estimated reading time: 165–205 minutes, plus lab time  
 Learning goal: Build shared vocabulary, architecture awareness, and planning discipline.
 
 Instructor focus:
@@ -53,6 +54,7 @@ Suggested live exercise:
 ### Module 2 — Core Platform Setup
 
 Lessons: 05 to 09  
+Estimated reading time: 210–270 minutes, plus lab time  
 Learning goal: Install Veeam, add infrastructure, understand repositories, and design meaningful jobs.
 
 Instructor focus:
@@ -68,6 +70,7 @@ Suggested live exercise:
 ### Module 3 — Data Processing and Mixed Workloads
 
 Lessons: 10 to 15  
+Estimated reading time: 255–335 minutes, plus lab time  
 Learning goal: Understand job behavior, proxy impact, application-aware processing, agents, and NAS.
 
 Instructor focus:
@@ -83,6 +86,7 @@ Suggested live exercise:
 ### Module 4 — Restore and DR
 
 Lessons: 16 to 21  
+Estimated reading time: 255–335 minutes, plus lab time  
 Learning goal: Choose the right restore method, understand replication, and design secondary copy strategy.
 
 Instructor focus:
@@ -98,6 +102,7 @@ Suggested live exercise:
 ### Module 5 — Long-Term Retention, Security and Scale
 
 Lessons: 22 to 26  
+Estimated reading time: 260–340 minutes, plus lab time  
 Learning goal: Understand tape, object storage, hardening, RBAC, automation, monitoring, and governance.
 
 Instructor focus:
@@ -113,6 +118,7 @@ Suggested live exercise:
 ### Module 6 — Troubleshooting and Exam Readiness
 
 Lessons: 27 to 28  
+Estimated reading time: 210–300 minutes (lesson 27 alone is 120–180 minutes — plan it as its own session)  
 Learning goal: Troubleshoot by layer and reason through VMCE-style questions.
 
 Instructor focus:

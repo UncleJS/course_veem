@@ -42,7 +42,7 @@ Verification after fixes: link/anchor checker **0 errors** across 44 files; all 
 
 ## Factual Corrections — F1–F4 applied after sign-off; F5–F7 still open
 
-> **Status update (2026-06-07):** F1–F4 were approved and applied. F5 (content enrichment) and F6 (glossary coverage gaps) were subsequently applied as well — every row of the F5 table below now has a corresponding factual callout in its lesson, and the glossary gained CDP and vPower NFS entries (147 terms total). Only F7 (low-priority notes) remains open as optional polish.
+> **Status update (2026-06-07):** F1–F4 were approved and applied. F5 (content enrichment) and F6 (glossary coverage gaps) were subsequently applied as well — every row of the F5 table below now has a corresponding factual callout in its lesson, and the glossary gained CDP and vPower NFS entries (147 terms total). F7's actionable items were also applied: the lesson 01 "no-hypervisor" wording slips, a VMCE-logistics verification note in lesson 28, lesson 27 split into its own study week in the pacing table, and per-module reading-time estimates in the instructor guide. The remaining F7 observations (intentional question reuse) need no action. **All review findings are now resolved.**
 
 ### F1. PostgreSQL is missing from the installation story — *the highest-value fix* (MAJOR) — ✅ APPLIED
 
@@ -101,7 +101,7 @@ A consistent pattern: "v12.x Notes" sections were placeholders, and defining v12
 - WAN Accelerator's "(Lesson 21)" tag was orphaned — lessons 19 and 21 now mention WAN accelerators.
 - Secure Restore's "(Lesson 16, 24)" tag was orphaned — lesson 16 now names Secure Restore (and Staged Restore, virtual disk restore, restore-to-cloud).
 
-### F7. Low-priority notes
+### F7. Low-priority notes — ✅ APPLIED (except the no-action items)
 
 - `lessons/01-introduction.md:236,263` — "No-hypervisor workloads…" reads as a typo for "Non-hypervisor" in those two sentences (the course's term "no-hypervisor path" is fine elsewhere). Cosmetic; left unchanged.
 - Heavy intentional question reuse across quizzes/exam bank (RPO/RTO, 3-2-1, transport fallback each appear 3–4 times). Fine for reinforcement; reduces value if all assessments are used in one sitting.

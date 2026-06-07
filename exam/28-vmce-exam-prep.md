@@ -289,6 +289,8 @@ If you can explain why a design choice is correct, perform a backup, perform a r
 
 ## Exam Day Advice
 
+This course deliberately avoids stating VMCE exam logistics — question count, duration, passing score, delivery format, and prerequisites change between exam versions. Before booking, verify the current details for your exam version on the official Veeam certification pages at veeam.com.
+
 - read scenario questions slowly
 - identify whether the question is really about recovery speed, retention, consistency, or architecture
 - eliminate answers that solve the wrong problem even if they sound technically impressive

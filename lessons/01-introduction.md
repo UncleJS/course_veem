@@ -240,7 +240,7 @@ It does not. Replication is useful for fast failover, but you still need backups
 It rarely is. If the repository fails, is encrypted, or becomes unavailable, your protection model collapses.
 
 **“Virtual workloads are the only important ones.”**  
-No-hypervisor workloads, physical systems, appliances, and standalone cloud servers are common and often critical.
+Workloads outside a hypervisor — physical systems, appliances, and standalone cloud servers — are common and often critical.
 
 [Go to TOC](#table-of-contents)
 
@@ -266,7 +266,7 @@ You have completed the lab if you can explain:
 
 - the difference between backup, replica, and backup copy
 - why multi-copy strategy matters
-- how no-hypervisor workloads fit into the overall design
+- how physical and other no-hypervisor-path workloads fit into the overall design
 
 [Go to TOC](#table-of-contents)
 

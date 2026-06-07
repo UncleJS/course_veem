@@ -169,7 +169,10 @@ This is a long-form course. It is reasonable to spread it across several weeks.
 | 4 | Lessons 13–16 |
 | 5 | Lessons 17–21 |
 | 6 | Lessons 22–24 |
-| 7 | Lessons 25–28 |
+| 7 | Lessons 25–26 |
+| 8 | Lesson 27 (standalone study block) and Lesson 28 |
+
+Lesson 27 is intentionally much deeper than the others (120–180 minutes of reading plus exercises), so it gets its own study block rather than being bundled with other lessons.
 
 This pacing is only a guide. Some learners will move faster, especially if they already administer backups. Others will move more slowly because they are building a lab from scratch. Both approaches are valid. The main goal is to avoid rushing through the restore and troubleshooting sections, because those are often the most important parts of the entire subject.
 
